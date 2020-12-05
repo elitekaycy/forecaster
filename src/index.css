@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.map{
+  height: 100vh;
+  width: 100%;
+}
+
+
+/*CurrentActive */
+
+.CurrentActive
+{
+  position: absolute;
+  top: 5%;
+  left: calc(100vw - 30%);
+  
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+}
+
+.Current{
+  font-size: 20px;
+}
+
+
+/*CurrentInfo*/
+.Currentinfo{
+  position: absolute;
+  top: 10%;
+  left: calc(100vw - 90%);
+  z-index: 1;
+}
+
+/*Climate logo */
+.climate{
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  z-index: 1;
+}
+
+/*searchbar css*/
+.searchBarmain{
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+max-width: 600px;
+width: 100%;
+
+}
+
+.search-bar
+{
+   background-color: white;
+   height: 60px;
+   border-radius: 5px;
+   border: 0;
+   max-width: 600px;
+   width: 100%;
+   transition: 300ms ease-in;
+}
+
+.search-bar:hover{
+  transform: scale(1.01,1.01);
+}
+
+.inputSearch
+{
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+}
+
+.inputSearch:focus{
+  outline: none;
+}
+
+.inputSearch::placeholder{
+  font-size: 15px;
+}
+
+.searchLogo{
+  height: 40px;
+  width: 20px;
+}
+
+.searchLogo:hover{
+  cursor: pointer;
+}
+
+.cardCompmain
+{
+  position: absolute;
+  color: white;
+  max-width: 700px;
+  width: 100%;
+  top: calc(100vh - 30%);
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  margin: 0 auto;
+
+}
+
+.CardComp{
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  z-index: 2;
+  border-radius: 8px;
+  border: 0;
+  transition: 200ms linear;
+  cursor: pointer;
+}
+
+.CardComp:hover{
+  transform: scale(1.5, 1.5)
+}
+
+/*Currentinfo fontsizes start */
+.temp{
+  font-size: 25px;
+}
+
+.weather{
+  font-size: 22px;
+}
+
+.pressure
+{
+  font-size: 20px;
+}
+
+.humidity
+{
+  font-size: 18px;
+}
+
+.temp-info
+{
+  font-size: 30px;
+}
+
+.weather-info{
+  font-size: 15px;
+}
+.pressure-info{
+  font-size: 30px;
+}
+.humidity-info{
+  font-size: 30px;
+}
+
+/*Current info fontsizes end.... */
+
+.temp, .temp-info, .weather, .weather-info, .humidity, .humidity-info, .pressure, .pressure-info {
+ transition: 200ms ease-in;
+ cursor: pointer;
+}
+
+.temp:hover, .temp-info:hover,.weather:hover, .weather-info:hover, .humidity:hover, .humidity-info:hover, .pressure:hover, .pressure-info:hover  {
+  transform: scale(1.1, 1.1);
+}
+
+
+/*Card Text and num Component */ 
+.cardtext{
+  font-size: 20px;
+}
+
+.cardnum{
+  font-size: 20;
+}
+
+
+
+/* Search page search here */
+.SearchPageSearch{
+  width: 100%;
+  height: 250px;
+  background-color: #192A56;
+  padding: 15px;
+}
+
+.SearchPageSearchbar{
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  height: 50px;
+}
+
+.SearchPageInputSearch{
+  width: 90%;
+  background-color: blue;
+  height: 50px;
+}
+
+.SearchPageInput
+{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.SearchPageInput:focus{
+  outline: none;
+}
+
+.SearchCardSearchitem{
+  transition: 300ms ease-in;
+}
+
+.SearchCardSearchitem:hover{
+  transform: scale(1.02, 1.02);
+}
+
+.hoversearch
+{
+  transition: 100ms ease-in;
+}
+
+.hoversearch:hover{
+transform: scale(1.02,1.02);
+}
+
+.Close{
+  position: absolute;
+  top: calc(100vh - 97vh);
+  left: calc(100vw - 10vh);
+  margin: 10;
+  padding: 5;
+  z-index: 5;
+  transition: 200ms ease-in;
+}
+
+.Close:hover{
+  transform: scale(1.02, 1.02);
+}
+
+
+
+@media (max-width: 600px)
+{
+  .cardCompmain
+  {
+    position: absolute;
+    color: white;
+    width: 300px;
+    top: calc(100vh - 40%);
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    margin: 0 auto;
+  
+  }
+
+  .CardComp{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    z-index: 2;
+  }
+
+  .Current{
+    font-size: 10px;
+  }
+
+
+  /*Currentinfo media query state */
+  .temp{
+    font-size: 15px;
+  }
+
+  .weather{
+    font-size: 14px;
+  }
+  
+.pressure
+{
+  font-size: 13px;
+}
+
+.humidity
+{
+  font-size: 12px;
+}
+
+.temp-info
+{
+  font-size: 20px;
+}
+
+.weather-info{
+  font-size: 10px;
+}
+.pressure-info{
+  font-size: 20px;
+}
+.humidity-info{
+  font-size: 20px;
+}
+
+/*Current info media query end.... */
+
+.cardtext{
+  font-size: 15px;
+}
+
+.cardnum{
+  font-size: 20;
+}
+
+.temp, .temp-info, .weather, .weather-info, .humidity, .humidity-info, .pressure, .pressure-info {
+  transition: 200ms ease-in;
+  cursor: pointer;
+ }
+ 
+ .temp:hover, .temp-info:hover,.weather:hover, .weather-info:hover, .humidity:hover, .humidity-info:hover, .pressure:hover, .pressure-info:hover  {
+   transform: scale(1.1, 1.1);
+ }
+
+
+}
