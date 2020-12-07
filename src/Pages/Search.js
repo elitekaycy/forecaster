@@ -29,7 +29,7 @@ function Search() {
     const loadQuery = (e) => {
         e.preventDefault()
         setisloading(true)
-        Axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${q}&appid=8dc78621783c5b884876b23e39b86f78`)
+        Axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=8dc78621783c5b884876b23e39b86f78`)
             .then(response => {
                 setquerydetail(response.data)
                 seterror('')
